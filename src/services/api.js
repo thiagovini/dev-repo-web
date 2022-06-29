@@ -20,10 +20,11 @@ export const getRepositories = async (userId, query) => {
 
 export const createRepository = async (userId, repositoryUrl) => {
     let url = `/users/${userId}/repositories`;
+    if (repositoryUrl !== '') { 
+      const repositoryName = getRepositoryName(repositoryUrl)
+      return api.post(url, { name: repositoryName, url: repositoryUrl })
+    }
 
-    const repositoryName = getRepositoryName(repositoryUrl)
-
-    return api.post(url, { name: repositoryName, url: repositoryUrl })
 }
 
 export const deleteRepository = async (userId, id) => {

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import "./styles.css"
+
 const Search = ({onSearch}) => {
 
     const [query, setQuery] = useState('');
@@ -11,11 +13,11 @@ const Search = ({onSearch}) => {
 
     return (
         <div className="search">
-            <label htmlFor="query">Procurar</label>
             <input 
                 type="text" 
                 name="query" 
                 id="query" 
+                placeholder="Procurar..."
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}/>
             <button onClick={() => onSearch(query)}>Procurar</button>

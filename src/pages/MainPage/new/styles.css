@@ -1,0 +1,48 @@
+
+.new {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #f1f1f1;
+    max-width: 480px;
+    margin: 2rem auto;
+    padding: .5rem;
+    background: #201b2c;
+    color: #f0ffffde;
+    border: none;
+    outline: none;
+}
+
+.new > label {
+    color: #f0ffffde;
+}
+
+.new > input::placeholder {
+    color: #f0ffffde;;
+}
+
+.new > input {
+    width: 76.65%;
+    padding: 4px;
+    outline: none;
+    border: none;
+    background: #514868;
+    color: #f0ffffde;
+    border-radius: 4px;
+}
+
+.new > input:focus-visible{
+    background: #9386b6;
+}
+
+.new > button {
+    width: 20%;
+    font-weight: 520;
+    padding: 4px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    background-color: #00ff88;
+    cursor: pointer;
+}

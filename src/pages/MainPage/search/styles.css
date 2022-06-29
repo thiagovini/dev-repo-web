@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+.search {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.search {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #f1f1f1;
+    max-width: 480px;
+    margin: 2rem auto;
+    padding: .5rem;
+    background: #201b2c;
+    border: none;
+    outline: none;
+}
+
+.search > label {
+    color: #f0ffffde;
+}
+
+.search > input::placeholder {
+    color: #f0ffffde;;
+}
+
+.search > input {
+    width: 100%;
+    padding: 4px;
+    outline: none;
+    border: none;
+    background: #514868;
+    color: #f0ffffde;
+    border-radius: 4px;
+}
+
+.search > input:focus-visible{
+    background: #9386b6;
+}
+
+.search > button {
+    width: 20%;
+    font-weight: 520;
+    padding: 4px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    background-color: #00ff88;
+    cursor: pointer;
+}

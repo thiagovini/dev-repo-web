@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useContext } from "react";
 import "./styles.css"
-import Nav from "./Nav";
-import Search from "./Search"
-import Repositories from "./Repositories";
+import Nav from "./nav/Nav";
+import New from "./new/New"
+import Search from "./search/Search"
+import Repositories from "./repositories/Repositories";
 import { getRepositories, createRepository, deleteRepository } from "../../services/api";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../contexts/auth";
@@ -54,8 +55,10 @@ const MainPage = () => {
     const handleNewRepo = async (url) => {
         console.log('Adicionar Repo')
         try {
-            await createRepository(user?.id, url)
-            await loadData()
+            if (url != null) {
+                await createRepository(user?.id, url)
+                await loadData()
+            }
         } catch (error) {
             console.error(error)
             setLogingError(true)
@@ -80,13 +83,13 @@ const MainPage = () => {
     }
 
     return(
-        <div id="main">
+        <div className="main" id="main">
             <Nav onLogout={handleLogout}></Nav>
             <Search onSearch={handleSearch}></Search>
             <Repositories 
                 repositories={repositories} 
-                onDeleteRepo={handleDeleteRepo} 
-                onNewRepo={handleNewRepo}/>
+                onDeleteRepo={handleDeleteRepo}/>
+            <New onNewRepo={handleNewRepo}></New>
         </div>
 
     );

@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 
-const Repositories = ({ repositories, onDeleteRepo, onNewRepo }) => {
+import "./styles.css"
+const Repositories = ({ repositories, onDeleteRepo }) => {
 
-    const [newRepo, setNewRepo] = useState('');
     return (
         <div className="repositories">
             <h2 className="title">Repositórios</h2>
@@ -24,17 +24,6 @@ const Repositories = ({ repositories, onDeleteRepo, onNewRepo }) => {
                     ))
                 }
             </ul>
-
-            <div className="new">
-                <label htmlFor="new-repo">Novo Repo:</label>
-                <input 
-                    type="url" 
-                    name="new-repo" 
-                    id="new-repo"
-                    value={newRepo}
-                    onChange={ (e) => setNewRepo(e.target.value) }/>
-                <button onClick={() => onNewRepo(newRepo)}>Adicionar</button>
-            </div>
         </div>
     );
 };

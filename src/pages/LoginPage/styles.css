@@ -1,29 +1,102 @@
-#login {
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Noto Sans' sans-serif;
+}
+
+.login {
+    width: 100vw;
+    height: 100vh;
+    background-color: #201b2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-login > h1 {
+    color: #77ffc0;
+}
+
+.right-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 15px;
+    background: #2f2841;
+    border-radius: 8%;
+    box-shadow: 0px 15px 40px #00000056;
+}
+
+.card-login > h1 {
+    color: #00ff88;
+    font-weight: 800;
+    margin: 0;
+}
+
+.textField {
+    width: 90%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    min-height: 100vh;
-    padding: 0 2rem;
 }
 
-#login .form {
-    background-color: #f1f1f1;
-    width: 50%;
-    max-width: 480px;
-    padding: .5rem;
-}
-
-#login .field label {
-    display: block;
-    margin-top: 1rem;
-}
-
-#login .field input {
+.textField > input {
     width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #514868;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 15px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
 }
 
-#login .actions {
-    text-align: center;
-    margin-top: 1rem;
+.textField > label {
+    width: 100%;
+    color: #f0ffffde;
+    padding: 10px 9px;
+}
+
+.textField > label::placeholder {
+    color: #f0ffffde;
+}
+
+.btn-login {
+    width: 82%;
+    padding: 16px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    align-items: center;
+    letter-spacing: 3px;
+    color: #2b134b;
+    background: #00ff88;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
 }

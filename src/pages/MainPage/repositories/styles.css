@@ -1,50 +1,12 @@
-.loading {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+.search {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.main {
-    width: 100vw;
-    height: 100vh;
-    background-color: #201b2c;
-    justify-content: center;
-    align-items: center;
-}
-
-#main .nav {
-    display: flex;
-    align-items: center;
-    background-color: #373146;
-    border-bottom: 1px solid #d5d5d5;
-    padding: .5rem;
-}
-
-/* #main .nav .logo {
-    color: #f0ffffde;
-    flex: 1;
-    font-size: 1rem;
+.repositories {
     margin: 0;
-}
-
-#main .search,
-#main .new {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    background-color: #f1f1f1;
-    max-width: 480px;
-    margin: 2rem auto;
-    padding: .5rem;
-}
-
-#main label {
-    flex-shrink: 0;
-}
-
-#main input {
-    width: 100%;
+    background: #201b2c;
 }
 
 #main .repositories {
@@ -59,6 +21,7 @@
     margin: 10px;
     font-size:  1.3rem;
     text-align: center;
+    padding: 20px 10px;
 }
 
 #main .repositories .list {
@@ -71,9 +34,13 @@
     background-color: #302841ee;
     display: flex;
     align-items: center;
-    background-color: #f1f1f1;
     border-bottom: 1px solid #d5d5d5;
     padding: 2rem;
+    color: #f0ffffde;
+}
+
+#main .repositories .item:first-child {
+    border-top: 1px solid #d5d5d5;
 }
 
 #main .repositories .item .name {
@@ -91,4 +58,17 @@
 
 #main .repositories .item .name {
     font-size: 1.5rem;
-} */
+} 
+
+.repositories .item > button {
+    border: none;
+    border-radius: 10px;
+    padding: 8px;
+    background: #514868;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 15px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+    cursor: pointer;
+}
